@@ -1,0 +1,29 @@
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  #content{
+    width: 40%;
+  }
+  .heading {
+    text-align: center;
+    color: brown;
+  }
+  
+  ul li {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding-inline: 1rem;
+    border: 1px solid red;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  img {
+    height: 15rem;
+    width: 10rem
+    
+  }

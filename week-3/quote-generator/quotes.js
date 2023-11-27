@@ -16,10 +16,10 @@
 // pickFromArray(['a','b','c','d'])     // maybe returns 'c'
 
 // You don't need to change this function
-function pickFromArray(choices) {
+
+function pickRandom(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-
 // A list of quotes you can use in your app.
 // DO NOT modify this array, otherwise the tests may break!
 const quotes = [
@@ -489,5 +489,23 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+document.querySelector("button");
 
 // call pickFromArray with the quotes array to check you get a random quote
+
+const randomQuote = pickRandom(quotes);
+const p = document.querySelector("#quote");
+const author = document.querySelector("#author");
+
+p.textContent = `‟ ${randomQuote.quote}`;
+author.textContent = `- ${randomQuote.author}`;
+
+const button = document.querySelector("#new-quote");
+console.log(button);
+
+button.addEventListener("click", () => {
+  const pickQuote = pickRandom(quotes);
+
+  p.textContent = pickQuote.quote;
+  author.textContent = pickQuote.author;
+});
